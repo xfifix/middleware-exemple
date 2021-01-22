@@ -1,0 +1,3 @@
+#index:
+#    path: /
+#    controller: App\Bundle1\Controller\Controller1::index

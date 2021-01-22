@@ -1,0 +1,19 @@
+framework:
+    messenger:
+        default_bus: messenger.bus.events
+        buses:
+            messenger.bus.events:
+                default_middleware: false
+                middleware:
+                    - 'App\Bundle1\Middleware\Middleware1'
+                    - 'App\Bundle2\Middleware\Middleware2'
+
+        transports:
+            # https://symfony.com/doc/current/messenger.html#transport-configuration
+            # async: '%env(MESSENGER_TRANSPORT_DSN)%'
+            # failed: 'doctrine://default?queue_name=failed'
+            # sync: 'sync://'
+
+        routing:
+            # Route your messages to the transports
+            # 'App\Message\YourMessage': async
